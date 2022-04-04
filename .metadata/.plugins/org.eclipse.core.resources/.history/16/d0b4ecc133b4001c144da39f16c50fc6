@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Powers {
+
+	public static void main(String[] args) {
+		String response;
+		do {
+			System.out.println("Enter an integer:");
+
+			Scanner scnr = new Scanner(System.in);
+
+			int num = scnr.nextInt();
+			int square = num * num;
+			int cube = num * num * num;
+			int i = 1;
+
+			System.out.printf("%-10s %-11s %-10s", "NUMBER", "SQUARED", "CUBED");
+			System.out.println();
+			System.out.printf("%-10s %-11s %-10s", "======", "=======", "=====");
+			System.out.println();
+			for (i = 1; i < num; i++) {
+
+				System.out.printf("%-10d %-11d %-10d", i, (i * i), (i * i * i));
+				System.out.println();
+			}
+
+			System.out.printf("%-10d %-11d %-10d", num, square, cube);
+			System.out.println();
+
+			System.out.println("Would you like to continue? Y/N");
+			response = scnr.next();
+		} while (response.equalsIgnoreCase("Y"));
+
+	}
+}

@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Powers {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Enter an integer:");
+		Scanner scnr = new Scanner(System.in);
+		int num = scnr.nextInt();
+		int square = num * num; 
+		int cube = num * num * num;
+		System.out.println("======");
+		System.out.printf("%5s %10s %10s", "NUMBER", "SQUARE", "CUBE");
+		System.out.printf(num + "     " + square + "     " + cube);
+		
+		
+
+	}
+
+}
